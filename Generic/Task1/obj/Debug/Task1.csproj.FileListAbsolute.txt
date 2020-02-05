@@ -1,0 +1,6 @@
+D:\Sourse\GitHub\Generic\Generic\Task1\bin\Debug\Task1.exe.config
+D:\Sourse\GitHub\Generic\Generic\Task1\bin\Debug\Task1.exe
+D:\Sourse\GitHub\Generic\Generic\Task1\bin\Debug\Task1.pdb
+D:\Sourse\GitHub\Generic\Generic\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+D:\Sourse\GitHub\Generic\Generic\Task1\obj\Debug\Task1.exe
+D:\Sourse\GitHub\Generic\Generic\Task1\obj\Debug\Task1.pdb
