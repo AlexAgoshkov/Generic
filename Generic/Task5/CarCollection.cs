@@ -35,6 +35,12 @@ namespace Task5
 
         }
 
+        public void Clear()
+        {
+            _item = new T[8];
+            Count = 0;
+        }
+
         public T[] GetList()
         {
             RemoveDefault();

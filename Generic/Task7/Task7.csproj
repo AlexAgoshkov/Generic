@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E9940949-DE1C-466E-A957-540895D3EEFF}</ProjectGuid>
+    <ProjectGuid>{F02124BF-29C1-40F9-B224-BE7C46664B85}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task3</RootNamespace>
-    <AssemblyName>Task3</AssemblyName>
+    <RootNamespace>Task7</RootNamespace>
+    <AssemblyName>Task7</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyDictionary.cs" />
+    <Compile Include="MyArrayList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
