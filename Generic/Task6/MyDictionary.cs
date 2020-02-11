@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task3
+namespace Task6
 {
     class MyDictionary<TKey, TValue>
     {
-        public MyKeyPair<TKey, TValue>[] _myKeyPairs = new MyKeyPair<TKey, TValue>[5];
+        public MyKeyPair<TKey, TValue>[] _myKeyPairs = new MyKeyPair<TKey, TValue>[8];
 
         public int Count { get; private set; }
 
@@ -29,9 +28,34 @@ namespace Task3
                     Count++;
                     break;
                 }
-                else if(IsKey(key))
+                else if (IsKey(key))
                 {
                     _myKeyPairs[i].Values.Add(value);
+                    break;
+                }
+            }
+        }
+
+        public void RemoveFromKey(TKey key, TValue value)
+        {
+            for (int i = 0; i < _myKeyPairs.Length; i++)
+            {
+                if (IsKey(key))
+                {
+                    _myKeyPairs[i].Values.Remove(value);
+                    break;
+                }
+            }
+        }
+
+        public void RemoveKey(TKey key)
+        {
+            for (int i = 0; i < _myKeyPairs.Length; i++)
+            {
+                if (IsKey(key) && _myKeyPairs[i].Key.Equals(key))
+                {
+                    //Console.WriteLine(_myKeyPairs[i].Key);
+                    _myKeyPairs[i] = null;
                     break;
                 }
             }
@@ -73,13 +97,13 @@ namespace Task3
                     Console.WriteLine($"   {item.Key}");
                     foreach (var val in item.Values)
                     {
-                       Console.WriteLine(val);
+                        Console.WriteLine(val);
                     }
                 }
             }
         }
 
-        public MyKeyPair<TKey, TValue>this[int index]
+        public MyKeyPair<TKey, TValue> this[int index]
         {
             get
             {
@@ -91,6 +115,6 @@ namespace Task3
             }
         }
 
-        
-    }    
+
+    }
 }

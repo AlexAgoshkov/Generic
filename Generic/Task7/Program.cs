@@ -15,20 +15,20 @@ namespace Task7
           
             arrayList.Add(4);
             arrayList.Add(1);
-            arrayList.Add(2);
-            arrayList.Add(3);
-            arrayList.Add(4);
-            arrayList.Remove(2);
+            arrayList.Add("Hello");
+            arrayList.Add(3.3);
+            arrayList.Add('h');
+            arrayList.Remove(4);
+
             var elemByIndex = arrayList.IndexOf(2);
             Console.WriteLine(elemByIndex);
             Console.WriteLine();
+
             foreach (var item in arrayList.GetList())
             {
                 Console.WriteLine(item);
                 
             }
-
-
 
             Console.ReadKey();
         }
