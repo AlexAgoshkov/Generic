@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Task3
 {
-    class MyDictionary<TKey, TValue>
+    class MyDictionary<TKey, TValue> 
     {
-        
+       
     }
 }

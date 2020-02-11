@@ -4,3 +4,8 @@ D:\Sourse\GitHub\Generic\Generic\Task3\bin\Debug\Task3.pdb
 D:\Sourse\GitHub\Generic\Generic\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
 D:\Sourse\GitHub\Generic\Generic\Task3\obj\Debug\Task3.exe
 D:\Sourse\GitHub\Generic\Generic\Task3\obj\Debug\Task3.pdb
+D:\Sourse\GitHub\Generic\Generic\Task3\bin\Debug\Google.ProtocolBuffers.dll
+D:\Sourse\GitHub\Generic\Generic\Task3\bin\Debug\Google.ProtocolBuffers.Serialization.dll
+D:\Sourse\GitHub\Generic\Generic\Task3\bin\Debug\Google.ProtocolBuffers.xml
+D:\Sourse\GitHub\Generic\Generic\Task3\bin\Debug\Google.ProtocolBuffers.Serialization.xml
+D:\Sourse\GitHub\Generic\Generic\Task3\obj\Debug\Task3.csproj.CopyComplete

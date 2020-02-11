@@ -7,69 +7,98 @@ using System.Threading.Tasks;
 
 namespace Task7
 {
-    class MyArrayList : IList, ICollection, IEnumerable, ICloneable
+    class MyArrayList 
     {
-        public object this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private object[] _array = new object[8];
 
-        public int Count => throw new NotImplementedException();
+        public int Count { get; private set; }
 
-        public object SyncRoot => throw new NotImplementedException();
-
-        public bool IsSynchronized => throw new NotImplementedException();
-
-        public bool IsReadOnly => throw new NotImplementedException();
-
-        public bool IsFixedSize => throw new NotImplementedException();
-
-        public int Add(object value)
+        public void Add(object item)
         {
-            throw new NotImplementedException();
+           
+            if (Count >= _array.Length)
+            {
+                ChangeCapactiy();
+            }
+            _array[Count] = item;
+            Count++;
         }
 
-        public void Clear()
+        public object[] GetList()
         {
-            throw new NotImplementedException();
+            RemoveDefault();
+            return _array;
         }
 
-        public object Clone()
+        public void Remove(object item)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < _array.Length; i++)
+            {
+                if (_array[i].Equals(item))
+                {
+                    _array[i] = default;
+                    Count--;
+                    break;
+                }
+            }
+            RemoveDefault();
         }
 
-        public bool Contains(object value)
+        public object IndexOf(int index)
         {
-            throw new NotImplementedException();
+            object element = null;
+
+            for (int i = 0; i < _array.Length; i++)
+            {
+                if (i == index)
+                {
+                    element = _array[i];
+                    break;
+                }
+            }
+
+            return element;
         }
 
-        public void CopyTo(Array array, int index)
+        public void ClearList()
         {
-            throw new NotImplementedException();
+            _array = new object[8];
+            Count = 0;
         }
 
-        public IEnumerator GetEnumerator()
+        private void ChangeCapactiy()
         {
-            throw new NotImplementedException();
+            object[] newArr = _array;
+            _array = new object[newArr.Length * 2];
+
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                _array[i] = newArr[i];
+            }
         }
 
-        public int IndexOf(object value)
+        private void RemoveDefault()
         {
-            throw new NotImplementedException();
-        }
+            object[] newArr = new object[Count];
 
-        public void Insert(int index, object value)
-        {
-            throw new NotImplementedException();
-        }
+            for (int i = 0; i < _array.Length - 1; i++)
+            {
+                if (_array[i] == null)
+                {
+                    var a = _array[i];
+                    _array[i] = _array[i + 1];
+                    _array[i + 1] = a;
+                }
+            }
 
-        public void Remove(object value)
-        {
-            throw new NotImplementedException();
-        }
+            for (int i = 0; i < newArr.Length; i++)
+            {
+                newArr[i] = _array[i];
+            }
 
-        public void RemoveAt(int index)
-        {
-            throw new NotImplementedException();
+            _array = newArr;
         }
     }
 }
+
 

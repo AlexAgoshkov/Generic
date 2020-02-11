@@ -13,7 +13,7 @@ namespace Task3
         {
             MyDictionary<string, string> myDictionary = new MyDictionary<string, string>();
 
-         
+          
 
             Console.ReadKey();
         }
